@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class CompositeNumbers {
+
+    public static void main(String[] args){
+
+        try{
+            int i , j;
+            System.out.println("Enter a :");
+
+            Scanner sc = new Scanner(System.in);
+            int a = sc.nextInt();
+
+            System.out.println("Enter b : ");
+
+            int b = sc.nextInt();
+            if(a<b ) {
+                for (i = a + 1; i < b; i++) {
+
+                    int count = 0;
+
+                    for (j = 1; j <= i; j++) {
+
+                        if (i % j == 0) {
+                            count = count + 1;
+                        }
+
+                    }
+                    if (count > 2) {
+                        System.out.println(i);
+
+                    }
+
+
+                }
+            }
+            else if(a > b || a == b){
+                System.out.println("Invalid entry");
+            }
+
+
+        }
+        catch(Exception e){
+            System.out.println("Invalid entry");
+        }
+
+
+
+
+    }
+}
