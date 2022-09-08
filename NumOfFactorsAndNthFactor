@@ -1,0 +1,44 @@
+import java.util.*;
+public class NumOfFactorsAndNthFactor {
+    public static void main(String[] args){
+
+        try{
+            int i;
+
+            System.out.println("Enter the number :");
+
+            Scanner sc = new Scanner(System.in);
+
+            int num = sc.nextInt();
+
+            System.out.println("Enter N :");
+
+            int n = sc.nextInt();
+
+            int count = 0 ;
+            for(i = 1; i <= num ; i++){
+
+                if(num % i == 0){
+                    count = count + 1 ;
+
+                    if(count == n){
+                        System.out.println("The " + n + "th factor of " + num + " is " + i);
+                    }
+
+                }
+            }
+            if(n > count){
+                System.out.println("Number of factors are lesser than the n value.");
+            }
+
+            System.out.println("Number of factors of " + num + " are " + count);
+
+
+
+
+        }
+        catch(Exception e){
+            System.out.println("Invalid Entry!");
+        }
+    }
+}
