@@ -1,0 +1,77 @@
+import java.util.*;
+
+public class Denominations{
+    public static void main(String[] args){
+
+        try {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter the 1st Denomination : ");
+            int first = sc.nextInt();
+
+            int fsum = 0;
+            if ((first == 100) || (first == 200) || (first == 500) || (first == 2000)) {
+
+                System.out.println("Enter the 1st Denomination number of notes : ");
+                int nfirst = sc.nextInt();
+
+                fsum = first * nfirst;
+            }
+            else{
+                System.out.println("Invalid Entry");
+            }
+
+            System.out.println("Enter the 2nd Denomination : ");
+            int second = sc.nextInt();
+
+            int ssum = 0;
+            if ((second == 100) || (second == 200) || (second == 500) || (second == 2000)) {
+
+                System.out.println("Enter the 2nd Denomination number of notes : ");
+                int nsecond = sc.nextInt();
+
+                ssum = second * nsecond;
+            }
+            else{
+                System.out.println("Invalid Entry");
+            }
+
+            System.out.println("Enter the 3rd Denomination : ");
+            int third = sc.nextInt();
+
+            int tsum = 0;
+            if ((third == 100) || (third == 200) || (third == 500) || (third == 2000)) {
+
+                System.out.println("Enter the 4th Denomination number of notes : ");
+                int nthird = sc.nextInt();
+
+                tsum = third * nthird;
+            }
+            else{
+                System.out.println("Invalid Entry");
+            }
+
+            System.out.println("Enter the 4th Denomination : ");
+            int fourth = sc.nextInt();
+            int fourthsum = 0;
+            if ((fourth == 100) || (fourth == 200) || (fourth == 500) || (fourth == 2000)) {
+
+                System.out.println("Enter the 4th Denomination number of notes : ");
+                int nfourth = sc.nextInt();
+
+                fourthsum = fourth * nfourth;
+            }
+            else{
+                System.out.println("Invalid Entry");
+            }
+
+            int total = (fsum + ssum + tsum + fourthsum);
+            System.out.println("Total Available balance in ATM : " + total);
+
+        }
+        catch(Exception e){
+            System.out.println("Invalid Entry..!");
+        }
+
+    }
+}
