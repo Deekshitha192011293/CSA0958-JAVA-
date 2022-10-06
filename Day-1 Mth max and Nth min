@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class MthMaxAndNthMin {public static void main(String[] args) {
+    try {
+        int n, M, N;
+        System.out.println("enter the size of the array:");
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        int[] array = new int[10];
+        System.out.println("enter the elements in the array:");
+        for (int i = 0; i < n; i++) {
+            array[i] = sc.nextInt();
+        }
+        System.out.println("enter value of m:");
+        M = sc.nextInt();
+        System.out.println("enter value of n:");
+        N = sc.nextInt();
+        if (M > n|| N>n) {
+            throw new NullPointerException("invalid due to large size of array");
+        }
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (array[i] > array[j]) {
+                    int swap = array[i];
+                    array[i] = array[j];
+                    array[j] = swap;
+                }
+            }
+        }
+        int max = array[n - M];
+        int min = array[N - 1];
+        System.out.println(M + "th max element=" + max);
+        System.out.println(N + "th min element=" + min);
+        System.out.println("sum = " + (max + min) + " difference= " + (max - min));
+    }
+    catch (NullPointerException e)
+    {
+        System.out.println("invalid due to larger array size");
+    }
+
+}
+}
