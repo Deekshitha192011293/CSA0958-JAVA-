@@ -1,0 +1,29 @@
+import java.util.*;
+public class StudentUsers {
+    public static void main(String[] args){
+        try{
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter the total users : ");
+
+            int total = sc.nextInt();
+
+            System.out.println("Enter the number of staff users : ");
+
+            int staff = sc.nextInt();
+            if((total > 0) && (staff < total)){
+                int nonStaff = staff / 3 ;
+                int studentUsers = total - staff - nonStaff ;
+
+                System.out.println("Total number of student users : " + studentUsers);
+            }
+            else{
+                System.out.println("Invalid entry..check it once");
+            }
+
+        }
+        catch(Exception e){
+            System.out.println("Invalid entry");
+        }
+    }
+}
