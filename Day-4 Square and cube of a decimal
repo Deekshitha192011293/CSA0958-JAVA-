@@ -1,0 +1,24 @@
+import java.util.*;
+public class SquareAndCubeOfDecimal{
+    public static void main(String[] args){
+        try{
+            double square,cube;
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Enter a decimal number : ");
+
+            double decimal = sc.nextDouble();
+
+            square = decimal * decimal ;
+            cube = decimal * decimal * decimal ;
+
+            System.out.println("Square of Decimal number : " + square);
+            System.out.println("Cube of Decimal number : " + cube);
+
+
+        }
+        catch(Exception e){
+            System.out.println("Invalid Entry");
+        }
+    }
+}
